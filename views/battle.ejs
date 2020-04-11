@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>start</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+      .heading{
+        font-family:"Courier New";
+        color:white;
+        font-weight:bolder;
+        font-size: 2vw;
+        text-align:center;
+        margin-top:6%;
+        text-decoration: underline;
+      }
+      .input{
+        
+        margin-left:20vw;margin-top:10%;width:60vw;height:5vh;
+      }
+      .input > input{
+        font-family:"Courier New";
+        border:none;
+        border-color:white;
+        border-radius:2%/25%;
+        font-size: 3vmin;
+        padding:0.2%;
+      }
+      .button{
+        font-family:"Courier New";
+        border:none;
+        border-color:white;
+        background-color:white;
+        color:#00acee;
+        border-radius:5%/25%;
+        font-weight:bolder;
+        font-size:3vmin;
+        padding:0.5%;
+        margin-left:44vw;
+        margin-top:5vh
+      }
+      .button:hover{
+        cursor: pointer;
+        background-color:#00acee;
+        color:white;
+      }
+      .output{
+         font-weight:bolder;
+         margin-left:20vw;margin-top:5vh;width:60vw;height:5vh;
+         font-family:"Courier New";
+         font-size: 3vmin;
+         color:white;
+         font-weight:bold;
+      }
+      .winner{
+        font-family:"Courier New";
+        color:white;
+        font-weight: bolder;
+        font-size:5vmin;
+        margin-top:20vh;
+        margin-left:25vw;
+        width:50vw;
+        height:7vh;
+        text-align:center;
+      }
+      .input > input::placeholder{
+        font-size:60%;
+        opacity:0.3;
+      }
+    	*:focus{
+        outline:none;
+       }
+       body{
+        background-color: #00acee;
+        overflow-x: hidden;
+        scroll-behavior:smooth;
+       }
+    </style>
+</head>
+<body>
+  <p class="heading">Twitter-Battle</p>
+  <form class="form" action="/combat" method="post">
+    <div class="input">
+      <input style="float:left" type="text" name="user1" placeholder="Enter Twitter Handle ">
+      <input style="float:right"type="text" name="user2" placeholder="Enter Twitter Handle "><br>
+    </div>
+    <button class="button" type="submit">Start Battle</button>
+  </form>
+  <div class="output" style="">
+    <p style="float:left"><%= score %></p>
+    <p style="float:right"><%= score2 %></p>
+  </div>
+  <div class="winner">
+    <p><%= winner %></p>
+  </div>
+</body>
+<script type="text/javascript">
+  $(document).ready(function(){
+      setTimeout(function(){
+        console.log("called");
+        var h = document.getElementsByClassName("hisg1");
+        h.innerHTML = '';
+        console.log(h);
+      },3000);
+  });
+</script>
+</html>

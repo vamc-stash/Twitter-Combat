@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>start</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+      .heading{
+        font-family:"Courier New";
+        color:white;
+        font-weight:bolder;
+        font-size: 2vw;
+        text-align:center;
+        margin-top:10%;
+      }
+      .points{
+        font-family:"Courier New";
+        font-weight:bold;
+        font-size:1.3vw;
+        margin-left:20%;
+      }
+      #start{
+        border:none;
+        margin-left:45%;
+        margin-top: 4%;
+        font-size:2.5vmin;
+        border-radius:50%;
+        text-align: center;
+        cursor: pointer;
+        padding:1.5%;
+        background-color: #00acee;
+        box-shadow:1px 1px 1px 1px white;
+        color:white;
+        font-weight:bolder;
+        animation-name:rotate;
+        animation-duration:3s;
+        animation-iteration-count:infinite;
+      }
+      #start:hover{
+        transform: scale(1.1);
+      }
+    
+      @keyframes rotate{
+        0%{box-shadow:1px 1px 1px 1px white;}
+        25%{box-shadow:1px 1px 1px 1px #00acee;}
+        50%{box-shadow:1px 1px 1px 1px white;}
+        75%{box-shadow:1px 1px 1px 1px #00acee;}
+        100%{box-shadow:1px 1px 1px 1px white;}
+      }
+    	*:focus{
+        outline:none;
+       }
+       body{
+        background-color: #00acee;
+        overflow-x: hidden;
+        scroll-behavior:smooth;
+       }
+    </style>
+</head>
+<body>
+  <p class="heading">Instructions & Terms</p>
+  <p class="points">1. Enter Twitter handle of battlers correctly and then start the Battle.</p>
+  <p class="points">2. It calculates score according to battler recent twitter activity (latest 200 tweets).</p>
+  <p class="points">3. This battle does not take into consideration of your followers twitter activity. </p> 
+  <p class="points">4 .Hit the server with lesser frequency :( </p>
+  <form action="/combat" method="get">
+    <button id = "start" >Go</button>
+  </form>
+  
+  
+</body>
+<script type="text/javascript">
+ 
+</script>
+</html>
