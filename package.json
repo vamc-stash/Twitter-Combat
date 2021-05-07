@@ -22,7 +22,7 @@
     "express-session": "^1.17.0",
     "sleep": "^6.1.0",
     "twit": "^2.2.11",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "wait.for": "^0.6.6"
   }
 }
